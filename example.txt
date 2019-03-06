@@ -1,0 +1,170 @@
+0100:  B409            mov ah, 09
+0102:  BA9001          mov dx, 0190
+0105:  CD21            int 21
+0107:  B40A            mov ah, 0A
+0109:  BAA901          mov dx, 01A9
+010C:  CD21            int 21
+010E:  E8A701          call 02B8
+0111:  BE0200          mov si, 0002
+0114:  33D2            xor dx, dx
+0116:  33C9            xor cx, cx
+0118:  8A9CA901        mov bl, [si + 01A9]
+011C:  80FB0D          cmp bl, 0D
+011F:  745D            je 017E
+0121:  80FB20          cmp bl, 20
+0124:  7406            je 012C
+0126:  41              inc cx
+0127:  46              inc si
+0128:  33DB            xor bx, bx
+012A:  EBEC            jmp 0118
+012C:  83F909          cmp cx, 0009
+012F:  7717            ja 0148
+0131:  8BD1            mov dx, cx
+0133:  83C230          add dx, 0030
+0136:  B402            mov ah, 02
+0138:  CD21            int 21
+013A:  33C9            xor cx, cx
+013C:  33D2            xor dx, dx
+013E:  46              inc si
+013F:  B402            mov ah, 02
+0141:  BA2000          mov dx, 0020
+0144:  CD21            int 21
+0146:  EBD0            jmp 0118
+0148:  33FF            xor di, di
+014A:  B30A            mov bl, 0A
+014C:  8BC1            mov ax, cx
+014E:  F6F3            div bl
+0150:  47              inc di
+0151:  33C9            xor cx, cx
+0153:  8AC8            mov cl, al
+0155:  32C0            xor al, al
+0157:  86              *Byte not recognised*
+0158:  C4              *Byte not recognised*
+0159:  50              push ax
+015A:  80F900          cmp cl, 00
+015D:  7402            je 0161
+015F:  EBEB            jmp 014C
+0161:  4F              dec di
+0162:  5A              pop dx
+0163:  83C230          add dx, 0030
+0166:  B402            mov ah, 02
+0168:  CD21            int 21
+016A:  83FF00          cmp di, 0000
+016D:  75F2            jne 0161
+016F:  E84E01          call 02C0
+0172:  80BCA9010D      cmp byte ptr [si + 01A9], 0D
+0177:  7413            je 018C
+0179:  33C9            xor cx, cx
+017B:  46              inc si
+017C:  EB9A            jmp 0118
+017E:  83F909          cmp cx, 0009
+0181:  77C5            ja 0148
+0183:  8BD1            mov dx, cx
+0185:  83C230          add dx, 0030
+0188:  B402            mov ah, 02
+018A:  CD21            int 21
+018C:  B44C            mov ah, 4C
+018E:  CD21            int 21
+0190:  49              dec cx
+0191:  7665            jbe 01F8
+0193:  736B            jae 0100
+0195:  69              *Byte not recognised*
+0196:  7465            je 01FD
+0198:  20              *Byte not recognised*
+0199:  65              *Byte not recognised*
+019A:  69              *Byte not recognised*
+019B:  6C              *Byte not recognised*
+019C:  7574            jne 0112
+019E:  65              *Byte not recognised*
+019F:  20              *Byte not recognised*
+01A0:  7A6F            jp 0111
+01A2:  64              *Byte not recognised*
+01A3:  7A69            jp 010E
+01A5:  753A            jne 01E1
+01A7:  20              *Byte not recognised*
+01A8:  24              *Byte not recognised*
+01A9:  FF00            push word ptr [bx + si]
+01AB:  24              *Byte not recognised*
+01AC:  24              *Byte not recognised*
+01AD:  24              *Byte not recognised*
+01AE:  24              *Byte not recognised*
+01AF:  24              *Byte not recognised*
+01B0:  24              *Byte not recognised*
+01B1:  24              *Byte not recognised*
+01B2:  24              *Byte not recognised*
+01B3:  24              *Byte not recognised*
+01B4:  24              *Byte not recognised*
+01B5:  24              *Byte not recognised*
+01B6:  24              *Byte not recognised*
+01B7:  24              *Byte not recognised*
+01B8:  24              *Byte not recognised*
+01B9:  24              *Byte not recognised*
+01BA:  24              *Byte not recognised*
+01BB:  24              *Byte not recognised*
+01BC:  24              *Byte not recognised*
+01BD:  24              *Byte not recognised*
+01BE:  24              *Byte not recognised*
+01BF:  24              *Byte not recognised*
+01C0:  24              *Byte not recognised*
+01C1:  24              *Byte not recognised*
+01C2:  24              *Byte not recognised*
+01C3:  24              *Byte not recognised*
+01C4:  24              *Byte not recognised*
+01C5:  24              *Byte not recognised*
+01C6:  24              *Byte not recognised*
+01C7:  24              *Byte not recognised*
+01C8:  24              *Byte not recognised*
+01C9:  24              *Byte not recognised*
+01CA:  24              *Byte not recognised*
+01CB:  24              *Byte not recognised*
+01CC:  24              *Byte not recognised*
+01CD:  24              *Byte not recognised*
+01CE:  24              *Byte not recognised*
+01CF:  24              *Byte not recognised*
+01D0:  24              *Byte not recognised*
+01D1:  24              *Byte not recognised*
+01D2:  24              *Byte not recognised*
+01D3:  24              *Byte not recognised*
+01D4:  24              *Byte not recognised*
+01D5:  24              *Byte not recognised*
+01D6:  24              *Byte not recognised*
+01D7:  24              *Byte not recognised*
+01D8:  24              *Byte not recognised*
+01D9:  24              *Byte not recognised*
+01DA:  24              *Byte not recognised*
+01DB:  24              *Byte not recognised*
+01DC:  24              *Byte not recognised*
+01DD:  24              *Byte not recognised*
+01DE:  24              *Byte not recognised*
+01DF:  24              *Byte not recognised*
+01E0:  24              *Byte not recognised*
+01E1:  24              *Byte not recognised*
+01E2:  24              *Byte not recognised*
+01E3:  24              *Byte not recognised*
+01E4:  24              *Byte not recognised*
+01E5:  24              *Byte not recognised*
+01E6:  24              *Byte not recognised*
+01E7:  24              *Byte not recognised*
+01E8:  24              *Byte not recognised*
+01E9:  24              *Byte not recognised*
+01EA:  24              *Byte not recognised*
+01EB:  24              *Byte not recognised*
+01EC:  24              *Byte not recognised*
+01ED:  24              *Byte not recognised*
+01EE:  24              *Byte not recognised*
+01EF:  24              *Byte not recognised*
+01F0:  24              *Byte not recognised*
+01F1:  24              *Byte not recognised*
+01F2:  24              *Byte not recognised*
+01F3:  24              *Byte not recognised*
+01F4:  24              *Byte not recognised*
+01F5:  24              *Byte not recognised*
+01F6:  24              *Byte not recognised*
+01F7:  24              *Byte not recognised*
+01F8:  24              *Byte not recognised*
+01F9:  24              *Byte not recognised*
+01FA:  24              *Byte not recognised*
+01FB:  24              *Byte not recognised*
+01FC:  24              *Byte not recognised*
+01FD:  24              *Byte not recognised*
+01FE:  24              *Byte not recognised*
