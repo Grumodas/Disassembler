@@ -52,6 +52,15 @@ Obtaining the .COM File
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+Output File
+
+	The output file has 3 columns:
+	1. The offset counting from the beginning of the code segment
+	2. The bytes which are being disassembed
+	3. The disasembled instruction (if instruction was not recognised, that will be visible in this column as well).
+	
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 Example
 
 	An example assembly program, .COM file of that program and a result file of disassembling the .COM file are provided by the author (example.asm, example.com and example.txt respectively). 
